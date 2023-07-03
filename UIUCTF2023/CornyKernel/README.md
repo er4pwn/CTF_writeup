@@ -82,9 +82,8 @@ use the command insmod to insert the module on the kernel
 /root ~
 ```
 so after inserting the module we get half the flag which is the uiuctf{m4ster_. So we just need the flag2.
-And after analyzing the code the pwny_exit function mentioned in the previous code i showed will only be executed if the kernel module containing that function is loaded and subsequently unloaded. So we must find a way to unload or exit the modules. I tried the rmmod, modprobe and reboot command on linux kernel but nothing happened and the flag2 is not printed out so this got me thinking what if we can just view the boot-time messages and kernel log messages by using the ```dmesg``` command.
-<br>
-<br>
+And after analyzing the code the pwny_exit function mentioned in the previous code i showed will only be executed if the kernel module containing that function is loaded and subsequently unloaded. So we must find a way to unload or exit the modules. I tried the rmmod, modprobe and reboot command on linux kernel but nothing happened and the flag2 is not printed out so this got me thinking what if we can just view the boot-time messages and kernel log messages see if we can get a fruity result by using the ```dmesg``` command.
+
 so i use the dmesg command and the result is:
 ```py
 ┌──(era㉿jihyoppa)-[/mnt/c/Users/jihyoppa/Desktop/kali]
