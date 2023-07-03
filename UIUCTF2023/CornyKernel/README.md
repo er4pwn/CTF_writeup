@@ -2,7 +2,7 @@
 ## Writeups by er4pwn
 Challange description:
 
-https://raw.githubusercontent.com/jihyoppa/CTF_writeup/main/UIUCTF2023/CornyKernel/Screenshot%202023-07-03%20182032.png
+![dsaaga]https://raw.githubusercontent.com/jihyoppa/CTF_writeup/main/UIUCTF2023/CornyKernel/Screenshot%202023-07-03%20182032.png
 ```py
 with open('c2', 'rb') as f:
     c2 = f.read(1024)
