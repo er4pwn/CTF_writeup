@@ -1,3 +1,2 @@
-#Nahamcon CTF 2024
-
-#CTF Writeups
+# Nahamcon CTF 2024
+## CTF Writeups
