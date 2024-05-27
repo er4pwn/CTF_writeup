@@ -7,6 +7,8 @@ The Challenge provided us with an instance where we have https://challenge.naham
 <br>
 I got stuck where I thought it was a Werkzeug debug RCE, and I tried to exploit it, but with no luck.
 <br>
-<img width="696" alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/c12bb22e-8ba1-4eac-b898-0468796a20ef">
+<br>
+<img width="696" alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/c85fd594-cd49-4fbc-ae0f-cccd7a7d4eba">
+<br>
 <br>
 Then, my friend gave me a hint where the solution is in the error code. So, I analyzed the error code one by one, and this particular error caught my attention.
