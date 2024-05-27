@@ -1,9 +1,12 @@
 <br>
 <img width="969" alt="Screenshot 2024-05-25 at 20 27 06" src="https://github-production-user-asset-6210df.s3.amazonaws.com/45916763/333977252-7c562a19-f71f-4a15-b142-c3e5759606ab.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240527%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240527T052646Z&X-Amz-Expires=300&X-Amz-Signature=78a9a0fd2e21d5a4bf5ec85d74693f82e31ecc37d3b3b249789269a0e6e729fb&X-Amz-SignedHeaders=host&actor_id=45916763&key_id=0&repo_id=661637344">
 <br>
+<br>
 The Challenge provided us with an instance where we have https://challenge.nahamcon.com:3167/, and we have a webpage where it says 'Explore the mystery.' Also, it has a button that says 'Learn about the code,' and it links to /code.
 <br>
+<br>
 <img width="696" alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/c12bb22e-8ba1-4eac-b898-0468796a20ef">
+<br>
 <br>
 I got stuck where I thought it was a Werkzeug debug RCE, and I tried to exploit it, but with no luck.
 <br>
@@ -13,6 +16,7 @@ I got stuck where I thought it was a Werkzeug debug RCE, and I tried to exploit 
 <br>
 Then, my friend gave me a hint where the solution is in the error code. So, I analyzed the error code one by one, and this particular error caught my attention.
 <br>
+<br>
 <img  alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/4f01af27-0374-467b-bbd2-f9d0ad0d873a">
 <br>
 <br>
@@ -20,13 +24,18 @@ It had two request methods, GET and PROPFIND. PROPFIND is used to retrieve prope
 
 I tried to manipulate the request of the root directory (/) through Burp Suite. I changed the request method from GET to PROPFIND, and boom! It gave me a result with multiple directories leaked.
 <br>
+<br>
 <img  alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/81c09c49-101a-423a-89fe-f3cd2cb20973">
+<br>
 <br>
 I saw the directory /the_secret_dav_inci_code/flag.txt, which contains the flag. However, the problem was that the directory /the_secret_dav_inci_code, which contains flag.txt, isn't in the web root directory. I needed to find a way to access the directory that contains the flag.
 <br>
+<br>
 <img  alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/e07965e7-9c21-44e4-afb7-88b6c0b69b94">
 <br>
+<br>
 I did a little bit of digging, and I found the app.py.backup in static directory, which contains the Flask web application code.
+<br>
 <br>
 <img  alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/74c90c13-8b2d-4724-801a-0590127846e1">
 <br>
@@ -61,7 +70,9 @@ def handle_webdav(path):
     abort(404)
 ```
 <br>
+<br>
 The MOVE method in the HTTP protocol is used to instruct the server to move a resource from one location to another. It's often used in conjunction with WebDAV (Web Distributed Authoring and Versioning) to manipulate resources on a web server, similar to using the 'mv' command in the terminal.
+<br>
 <br>
 Now, I manipulated the request again using Burp Suite and used the MOVE method to move flag.txt to another directory, which is /static/.
 <br>
