@@ -31,6 +31,9 @@ I did a little bit of digging, and I found the app.py.backup in static directory
 <img  alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/74c90c13-8b2d-4724-801a-0590127846e1">
 <br>
 <br>
+```'@app.route('/path:path', methods=['GET', 'PROPFIND', 'MOVE']):'``` This line defines a route that captures any URL path and accepts three HTTP methods: GET, PROPFIND, and MOVE. The captured path is passed to the handle_webdav function as an argument, so it has a MOVE method.
+<br>
+<br>
 ```
 @app.route('/<path:path>', methods=['GET', 'PROPFIND', 'MOVE'])
 def handle_webdav(path):
@@ -57,4 +60,18 @@ def handle_webdav(path):
         abort(405)
     abort(404)
 ```
+<br>
+The MOVE method in the HTTP protocol is used to instruct the server to move a resource from one location to another. It's often used in conjunction with WebDAV (Web Distributed Authoring and Versioning) to manipulate resources on a web server, similar to using the 'mv' command in the terminal.
+<br>
+Now, I manipulated the request again using Burp Suite and used the MOVE method to move flag.txt to another directory, which is /static/.
+<br>
+<br>
+<img  alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/894f849a-3aea-4e27-835a-8e132c6c57c3">
+<br>
+<br>
+I could access the flag through challenge.nahamcon.com:31673/static/flag.txt.
+<br>
+<br>
+<img  alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/1b887c96-9095-4ac0-9fb7-ef07998b6b57">
+
 
