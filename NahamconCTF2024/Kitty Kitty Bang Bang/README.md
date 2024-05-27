@@ -12,7 +12,7 @@ Upon examination, we discovered that the application logs messages whenever the 
 To delve deeper into its functionality, we utilized adb to install and launch the .apk. Subsequently, we employed logcat to display the logged messages, providing valuable insights into the application's behavior.
 <br>
 <br>
-<img width="696" alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/4e00aae1-e691-4a0f-bf3d-624d9e860a4b">
+<img width="696" alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/02c7aad8-c3c5-4e72-856a-069bb0f9a2dd">
 <br>
 <br>
 Reviewing the logcat we got the flag!
