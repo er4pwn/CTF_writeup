@@ -12,3 +12,7 @@ I got stuck where I thought it was a Werkzeug debug RCE, and I tried to exploit 
 <br>
 <br>
 Then, my friend gave me a hint where the solution is in the error code. So, I analyzed the error code one by one, and this particular error caught my attention.
+<img width="696" alt="dsadsa" src="https://github.com/er4pwn/CTF_writeup/assets/45916763/4f01af27-0374-467b-bbd2-f9d0ad0d873a">
+<br>
+<br>
+It had two request methods, GET and PROPFIND. PROPFIND is used to retrieve properties stored as XML from a web resource. It is also overloaded to allow one to retrieve the collection structure (a.k.a. directory hierarchy) of a remote system.
