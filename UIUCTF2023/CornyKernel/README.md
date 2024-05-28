@@ -1,10 +1,11 @@
 # Corny Kernel - uiuctf 2023
 ## Writeups by er4pwn
-```misc``` ```systems``` ```beginner```
-50 Points
 <br>
 <img width="696" alt="dsadsa" src="https://raw.githubusercontent.com/er4pwn/CTF_writeup/main/UIUCTF2023/CornyKernel/Screenshot%202023-07-03%20182032.png">
 <br>
+```misc``` ```systems``` ```beginner```
+50 Points
+
 Challange information:
 ```
 Use our corny little driver to mess with the Linux kernel at runtime!
