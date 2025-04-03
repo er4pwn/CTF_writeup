@@ -19,8 +19,8 @@ Navigating to the endpoint in a browser:
 
 🔗 **URL:** [http://chals.swampctf.com:44444/api/person](http://chals.swampctf.com:44444/api/person)  
 
-The flag was directly visible in the JSON response. 🎉  
+The flag was directly visible in the JSON response. 
 
 ![Flag Screenshot](images/flagserialies.png)  
 
-🚩 **Flag:** `flag{REDACTED}`  
+ **Flag:** `swampCTF{f1l3_r34d_4nd_d3s3r14l1z3_pwn4g3_x7q9z2r5v8}`  
