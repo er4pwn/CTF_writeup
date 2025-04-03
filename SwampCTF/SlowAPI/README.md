@@ -25,7 +25,7 @@ To successfully exploit this vulnerability, the actual API endpoint had to be id
 /api/protected/flag
 ```
 
-![Screenshot of Developer Tools](images/slowapi.png)
+![Screenshot of Developer Tools](images/slowap2.png)
 
 Using Burp Suite, an HTTP request was crafted to include the required header:
 
