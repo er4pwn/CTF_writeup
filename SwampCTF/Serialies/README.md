@@ -9,6 +9,8 @@ We were given a file named `serialies.zip`. Extracting the file revealed a `src`
 
 By examining the file **`src/main/java/com/serialies/serialies/PersonController.java`**, we discovered an interesting API endpoint:  
 
+![api Screenshot](images/apiperson.png)  
+
 ```
 /api/person
 ```
@@ -19,6 +21,6 @@ Navigating to the endpoint in a browser:
 
 The flag was directly visible in the JSON response. 🎉  
 
-![Flag Screenshot](images/flag.png)  
+![Flag Screenshot](images/flagserialies.png)  
 
 🚩 **Flag:** `flag{REDACTED}`  
