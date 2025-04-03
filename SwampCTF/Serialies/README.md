@@ -21,6 +21,6 @@ Navigating to the endpoint in a browser:
 
 The flag was directly visible in the JSON response. 
 
-![Flag Screenshot](images/flagserialies.png)  
+![Flag Screenshot](images/flagserialies.png.png)  
 
  **Flag:** `swampCTF{f1l3_r34d_4nd_d3s3r14l1z3_pwn4g3_x7q9z2r5v8}`  
